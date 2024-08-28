@@ -1,0 +1,133 @@
+/* Container for the entire footer */
+.container {
+  background-color: #3B455A;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Flex container for the footer content */
+.footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* Styling for social media icons */
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Centers the icons horizontally */
+  gap: 2rem;
+  margin-top: 30px;
+  color: white;
+}
+
+/* Hover effect for social media icons */
+.facebook:hover, .instagram:hover, .youtube:hover {
+  transform: scale(1.1); 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; 
+  background-color: #3b455a; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  text-decoration: none; 
+  color: white;
+}
+
+/* Change background and shadow on hover */
+.icons a:hover {
+  background-color: #1e1e1e;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  color: white; 
+}
+
+/* Styling for the footer logo */
+img {
+  width: 200px;
+  height: auto;
+}
+
+/* Styling for the h3 and p tags inside footer sections */
+.h3 h3 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 22px;
+}
+
+.h3 p {
+  margin: 5px 0;
+  color: #b1b3b6;
+  font-size: 20px;
+}
+
+/* Change paragraph color on hover */
+.h3 p:hover {
+  color: white;
+}
+
+/* Styling for anchor tags inside the h3 and p */
+.h3 a {
+  text-decoration: none; /* Remove underline from links */
+  color: #b1b3b6; /* Default color for links */
+  font-size: 24px;
+}
+
+/* Change color of anchor tags on hover */
+.h3 a:hover {
+  color: white; /* White color on hover */
+}
+
+/* Responsive design for tablets */
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 90%;
+    padding: 30px 0;
+  }
+
+  .icons {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 620px) {
+  .footer {
+    display: block; /* Stack the sections vertically */
+    text-align: center;
+  }
+
+  .icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .h3 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  img {
+    width: 150px; /* Reduce logo size for mobile */
+  }
+}
