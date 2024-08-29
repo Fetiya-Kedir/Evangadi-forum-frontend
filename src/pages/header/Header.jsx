@@ -54,7 +54,7 @@ function Header() {
               isDropdownOpen ? style.dropdownVisible : ""
             }`}
           >
-            <Link to={"#"} style={{ paddingTop: "10px" }}>Home</Link>
+            <Link to={"/"} style={{ paddingTop: "10px" }}>Home</Link>
             <Link style={{ paddingTop: "10px" }}>How it works</Link>
             {isAuthenticated ? (
               <button className={style.btn} onClick={handleSignOut}>
