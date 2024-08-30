@@ -5,7 +5,8 @@ import { useParams, Link } from 'react-router-dom';
 import axios from '../../axiosConfig';
 import { AppState } from '../../App';
 import Footer from '../footer/Footer';
-import { FaRegUserCircle, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
+import { GrUserManager } from 'react-icons/gr';
 
 export default function Answer() {
 	const { user } = useContext(AppState);
@@ -114,7 +115,7 @@ export default function Answer() {
 							answers.map((answer) => (
 								<div key={answer.answerid}>
 									<div className={style.circle}>
-										<FaRegUserCircle className={style.icon} size={70} />
+										<GrUserManager className={style.icon} size={70} />
 									</div>
 									<li className={style.userAnswer}>
 										<h2>{answer.username}</h2>

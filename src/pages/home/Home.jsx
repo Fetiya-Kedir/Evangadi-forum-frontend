@@ -4,8 +4,9 @@ import style from './Home.module.css';
 import Header from '../header/Header';
 import { Link } from 'react-router-dom';
 import axios from '../../axiosConfig';
-import { FaRegUserCircle, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
+import { GrUserManager } from 'react-icons/gr';
 import Footer from '../footer/Footer';
 
 function Home() {
@@ -80,7 +81,7 @@ function Home() {
 								<Link to={`/answer/${question.questionid}`}>
 									<div className={style.quesion_container}>
 										<div className={style.userQuesion}>
-											<FaRegUserCircle className={style.icon} size={70} />
+											<GrUserManager className={style.icon} size={70} />
 											<h3 style={{ marginLeft: '15px' }}>
 												{getuser.find((user) => user.userid === question.userid)
 													?.username || 'Unknown'}

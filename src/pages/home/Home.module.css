@@ -1,130 +1,125 @@
 .container {
-  width: 80%;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 110px;
+	width: 80%;
+	align-items: center;
+	margin: 0 auto;
+	padding-top: 110px;
 }
-
 .header {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
-
 .link1 {
-  background-color: #0b5ed7;
-  border-radius: 5px;
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  margin-left: 3px;
-  font-size: larger;
-  text-align: right;
+	background-color: #0b5ed7;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	padding: 10px 15px;
+	margin-left: 3px;
+	font-size: larger;
+	text-align: right;
 }
-
 .question_header {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
-
 .userQuesion {
-  display: flex;
-  padding: 10px;
+	display: flex;
+	padding: 10px;
 }
-
 .title h3 {
-  margin-top: 30px;
-  margin-left: 70px;
+	margin-top: 30px;
+	margin-left: 70px;
 }
-
 .quesion_container {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid black;
-  padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid black;
+	padding: 15px 0;
 }
-
 .question_header h1 {
-  margin-top: 40px;
+	margin-top: 40px;
 }
-
 .arrow_icon h2 {
-  margin-top: 40px;
-  color: #000;
+	margin-top: 40px;
+	color: #000;
 }
-
 .search {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-top: 10px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-top: 10px;
 }
-
 .search input {
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 14px;
-  padding: 10px 15px;
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 14px;
+	padding: 10px 15px;
 }
-
 .searchIcon {
-  position: absolute;
-  right: 10px;
-  color: #ccc;
-  padding-top: 15px;
+	position: absolute;
+	right: 10px;
+	color: #ccc;
+	padding-top: 15px;
 }
-
 .quesion a {
-  text-decoration: none;
-  color: #012D66;
+	text-decoration: none;
+	color: #012d66;
 }
-
 .questionContainer {
-  transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
-
 .questionContainer:hover {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
-
 .search-icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: #aaa;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	font-size: 20px;
+	color: #aaa;
 }
-
 /* Styling for buttons */
 .questionButtons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+@media only screen and (max-width: 414px) {
+  .search {
+    width: 100%;
+    position: relative; /* Ensure the icon is positioned relative to the input */
+  }
+
+  .search input {
+    width: 90%; /* Adjust input width to leave space for the icon */
+    font-size: 14px;
+    padding: 8px 35px 8px 10px; /* Add right padding for the icon */
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .searchIcon {
+    position: absolute;
+    right: 20px; /* Position the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+  }
 }
 
-.deleteButton, .updateButton {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  color: white;
-  font-size: 14px;
+@media only screen and (max-width: 375px) {
+  .search input {
+    width: 85%;
+    font-size: 12px;
+    padding: 6px 30px 6px 8px; /* Adjust padding for the icon */
+  }
+
+  .searchIcon {
+    right: 15px; /* Adjust the position of the icon for smaller screens */
+    font-size: 14px;
+  }
 }
 
-.deleteButton {
-  background-color: #d9534f;
-}
-
-.deleteButton:hover {
-  background-color: #c9302c;
-}
-
-.updateButton {
-  background-color: #0275d8;
-}
-
-.updateButton:hover {
-  background-color: #025aa5;
-}

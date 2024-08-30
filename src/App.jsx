@@ -3,17 +3,17 @@ import './App.css';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, useCallback } from 'react';
 import axios from './axiosConfig';
 import Answer from './pages/answer/Answer';
 import Question from './pages/question/Question';
 export const AppState = createContext();
 function App() {
 	const [user, setuser] = useState([]);
-
 	const token = localStorage.getItem('token');
 	const navigate = useNavigate();
-	async function checkUser() {
+
+	const checkUser = useCallback(async () => {
 		try {
 			const { data } = await axios.get('/users/check', {
 				headers: {
@@ -25,11 +25,11 @@ function App() {
 			console.log(error.response);
 			navigate('/login');
 		}
-	}
+	}, [token, navigate]);
 
 	useEffect(() => {
 		checkUser();
-	}, [token]);
+	}, [checkUser]);
 
 	return (
 		<AppState.Provider value={{ user, setuser }}>

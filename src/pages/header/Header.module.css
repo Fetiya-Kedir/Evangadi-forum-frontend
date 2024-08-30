@@ -1,105 +1,106 @@
-.btn{
-    background-color: #0B5ED7;
-    border-radius: 5px;
-    width: 200px;
-    margin-top: 0;
+/* Apply CSS variables to the entire document (body, header, and other elements) */
+
+/* Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --menu-link-color: #000000A6;
+    --btn-text: white;
 }
 
-.btn:hover{
-    background-color: #FF8806;
-}
-.menu a {
-    text-decoration: none;
-    color: #000000A6;
-}
-.menu a:hover{
-    text-decoration: underline;
-    color:  #FF8806;
-}
-.dropdown{
-    display: flex;
-    gap: 20px;
-    color: black;
+/* Dark Theme */
+body.dark {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --menu-link-color: #ffffff;
+    --btn-text: #000000;
 }
 
-.header_container{
+/* Ensure that the variables apply to the whole body and key elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.header_container {
     display: flex;
-    /* justify-content: space-around; */
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    color: #fff;
+    color: var(--text-color); /* Dynamic text color */
+    background-color: var(--bg-color); /* Dynamic background color */
     box-shadow: 0 .125rem .25rem #00000013 !important;
     z-index: 999 !important;
-    background-color: white;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
 }
 
-.logo img{
-background-color: #fff;
-
+.menu a {
+    text-decoration: none;
+    color: var(--menu-link-color); /* Dynamic link color based on theme */
 }
 
-@media screen and (max-width: 750px) {
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.dropdownVisible {
-    display: block; /* Show the dropdown content when isOpen is true */
-}
-
-p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
+.menu a:hover {
+    text-decoration: underline;
+    color: #FF8806;
 }
 
 .btn {
-    background-color: #0B5ED7; /* Green */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    background-color: #0B5ED7;
     border-radius: 5px;
-    margin-top: 10px;
-    display: block;
-    /* width: 100%; */
+    width: 200px;
+    margin-top: 0;
+    color: var(--btn-text); /* Use CSS variable for button text color */
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #FF8806;
 }
 
-.menuButton {
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    font-size: 24px;
-    padding-left: 35%;
+.dropdown {
+    display: flex;
+    gap: 20px;
+    color: var(--text-color); /* Dynamic text color */
 }
 
+.logo img {
+    background-color: #fff;
 }
 
+/* Media queries remain the same */
+
+@media screen and (max-width: 750px) {
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .dropdownVisible {
+        display: block;
+    }
+
+    .menuButton {
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
 
 @media screen and (min-width: 751px) {
     .menuButton {
         display: none;
     }
-    
 }

@@ -1,103 +1,197 @@
-.title{
+.title {
     margin-left: 80px;
     padding-top: 110px;
     font-family: monospace;
-   
 }
 
-.Question1{
-  color: #482602;
+.Question1 {
+    color: #482602;
 }
 
-.Question h1{
-margin-left: 40%;
-}
-.Question p{
-    margin-left: 40%;
-}
-hr{
+hr {
     width: 85%;
 }
 
-.answersFromCommunity{
+.answersFromCommunity {
     padding: 10px 0;
 }
 
-.userAnswer{
+/* Update the userAnswer section for better spacing */
+.userAnswer {
     display: flex;
-    gap: 120px;
+    align-items: center;
+    gap: 20px; /* Adjusted gap for spacing between the icon and text */
+    padding: 15px 0;
     border-bottom: 1px solid black;
     width: 85%;
 }
-.circle{
-    margin-top: 10px;
+
+/* Ensure proper spacing for the circle icon */
+.circle {
+    margin-right: 10px; /* Add space between the icon and text */
 }
 
-.userAnswer h2{
-    margin-left: 9px;
+.userAnswer h2 {
+    margin-left: 0; /* Removed unnecessary margin */
 }
 
 .userAnswer div h4 {
-margin-top: -45px;
+    margin-top: -10px; /* Adjusted margin for proper alignment */
 }
 
-.answer{
+/* Styling for the answer section */
+.answer {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 15%;
+    margin: 0 auto; /* Centered the answer section */
     margin-top: 70px;
-    padding: 20px 0;
+    padding: 20px;
     background-color: whitesmoke;
+    max-width: 800px; /* Added a max-width for better mobile layout */
+    width: 100%;
 }
-.answer_public_question{
+
+/* Center the public question link */
+.answer_public_question {
     text-align: center;
 }
-.answer_public_question .link{
+
+.answer_public_question .link {
     text-decoration: none;
     color: black;
 }
-.answer_public_question .link:hover{
+
+.answer_public_question .link:hover {
     text-decoration: underline;
     color: chocolate;
 }
-.answer_form{
-width: 94%;
-margin-left: 10px;
 
-}
-.answer_form input{
-border-radius: 10px;
-}
-.answer_form textarea {
-    width: 98%;
-}
-.answer_form textarea{
-border-radius: 10px;
-padding: 10px;
-}
 
-.answer_container{
+/* Improve the answer container layout */
+.answer_container {
     border-radius: 2px;
     box-shadow: rgba(170, 174, 197, 0.2) 2px 1px 1px inset;
     background-color: rgb(245, 245, 245);
-    padding-left: 25px;
+    padding: 25px;
     max-height: 300px;
-    overflow: hidden scroll;
+    overflow-y: auto;
 }
-.btn{
-    background-color: #0B5ED7;border-radius: 5px;
+
+/* Button styles */
+.btn {
+    background-color: #0B5ED7;
+    border-radius: 5px;
     width: 160px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: chocolate;
 }
-@media screen and (max-width: 700px) {
-    .answer{
-        width: 400px;
-        height: 300px;
-    }
-    .answer_form{
-    width: 350px;
-    margin: auto;
+
+.answer_form {
+    width: 100%; /* Ensures full width of the container */
+    margin: 0 auto;
+    padding: 10px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Includes padding in the element's total width */
 }
-    
+
+.answer_form textarea {
+    width: 100%; /* Full width */
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+.answer_form textarea:focus {
+    outline: none; /* Removes the default blue outline on focus */
+    border: 2px solid #0B5ED7; /* Adds a focused border */
+}
+
+.answer_form button {
+    margin-top: 10px; /* Adds space above the button */
+    width: 100%; /* Button takes the full width of the form */
+    padding: 10px;
+    background-color: #0B5ED7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.answer_form button:hover {
+    background-color: chocolate;
+}
+
+/* Adjustments for small screen devices */
+@media screen and (max-width: 700px) {
+    .answer_form {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .answer_form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .answer_form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .answer_form {
+        padding: 5px; /* Slightly smaller padding for very small screens */
+    }
+
+    .answer_form textarea {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+        padding: 8px; /* Adjust the padding for a cleaner look */
+    }
+
+    .answer_form button {
+        font-size: 14px; /* Slightly smaller button text */
+    }
+}
+
+
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 700px) {
+    .answer {
+        width: 100%; /* Ensure the answer section takes full width */
+        padding: 15px;
+    }
+
+    .userAnswer {
+        gap: 10px; /* Reduce the gap for smaller screens */
+        flex-wrap: wrap; /* Stack elements on smaller screens */
+    }
+
+    .answer_form {
+        width: 100%;
+        margin: auto;
+    }
+
+    .answer_container {
+        padding: 15px;
+        max-height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        margin-left: 20px;
+    }
+
+    .userAnswer {
+        flex-direction: column; /* Stack username and answer vertically */
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .answer {
+        width: 100%;
+    }
 }
